@@ -58,6 +58,12 @@ Normal user: user / user
 Option B: Web Version (Streamlit – recommended)
 streamlit run library_app.py
 Browser will open automatically (usually http://localhost:8501)
+The system automatically:
+
+Creates library.db
+Adds default admin & user accounts (hashed passwords)
+
+If login fails → delete library.db file and restart the app (it will recreate defaults).
 
 ├── library_app.py             ← Streamlit web version (browser interface)
 ├── library.db                 ← SQLite database (created automatically)
